@@ -18,21 +18,31 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
 }
+img {
+  max-width: 100%;
+}
+p{
+  max-width: 45ch;
+}
 
 .heading {
   font-family: "DM Serif Display", serif;
   font-size: 6.6rem;
+  line-height: 6.8rem;
   letter-spacing: 0.2rem;
-  padding: 4rem 0 2rem;
+  padding-bottom: 2rem;
   color: #20202b;
 }
 .heading.secondary {
   font-size: 3.2rem;
+  line-height: inherit;
+  padding-bottom: .5rem;
 }
 
 .container {
-  max-width: 84rem;
+  max-width: 87rem;
   margin: 0 auto;
+  padding: 0 3rem;
 }
 .d-flex {
   display: flex;
@@ -73,14 +83,16 @@ body {
 }
 
 .hero-area {
-  display: flex;
-  gap: 3rem;
   padding: 5rem 0;
+  --flex-spacer: 4rem;
 }
 .hero-pera {
   color: #2f2f2f;
 }
-
+.hero-area__content{
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
 .hero-area .btn {
   background-color: #131255;
   font-weight: 700;
@@ -89,6 +101,7 @@ body {
   display: inline-block;
   margin-top: 5rem;
   padding: 1.2rem 3rem;
+  border-radius: 0.6rem;
 }
 
 .section2 {
@@ -106,12 +119,14 @@ body {
 .footer {
   background-color: #2f2f2f;
   padding: 5rem 0;
+  --flex-spacer: 3rem;
 }
 .footer__left h4 {
   color: #fff;
   font-size: 1.4rem;
   margin-top: 2.5rem;
   margin-bottom: 2rem;
+  letter-spacing: 0.02rem;
 }
 
 .footer__left p {
@@ -119,12 +134,14 @@ body {
   font-size: 1.4rem;
   max-width: 35ch;
   margin-bottom: 1rem;
+  letter-spacing: 0.02rem;
 }
 
 .footer__left a {
   color: #fff493;
   text-decoration: none;
   font-size: 1.4rem;
+  letter-spacing: 0.02rem;
 }
 
 .footer__right {
@@ -132,4 +149,42 @@ body {
   flex-direction: column;
   gap: 2.5rem;
   align-items: flex-end;
+}
+
+@media (max-width:42em) {
+  .cactus_img{
+    display: none;
+  }
+  .hero-area{
+    padding: 3rem 0;
+    --flex-spacer: 0;
+  }
+  .hero-area .btn{
+    margin-top: 3rem;
+  }
+
+  .d-flex{
+    flex-direction: column;
+  }
+  .heading{
+    font-size: 4.5rem;
+    line-height: 5rem;
+  }
+  .section2{
+    --flex-spacer: 3rem;
+  }
+  .text-right{
+    text-align: left;
+  }
+  .keep_img{
+    display: none;
+  }
+  .container > .px-5{
+    padding: 2rem 0;
+  }
+  .footer__right{
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
 }
